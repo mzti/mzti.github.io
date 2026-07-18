@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<pre>
 <#
 .SYNOPSIS
     Instalação e personalização automatizada de softwares e o perfil de usuário no ambiente Windows.
@@ -3322,3 +3329,6 @@ EXIT
 # iiAG2N8J3J36qyg1TvuNjmswOqROWM27ybuhQVpmEIQHvvb6HnN9ZYr+JFqLsEnO
 # TKgN/To=
 # SIG # End signature block
+</pre>
+</body>
+</html>
