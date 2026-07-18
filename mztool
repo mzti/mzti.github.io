@@ -1,40 +1,4 @@
-# ============================
-# MZTool Loader
-# ============================
+# MZTOOL LOADER
 
-$rawUrl = 'https://raw.githubusercontent.com/mzti/mztool/main/mztool.ps1'
-
-Write-Host "MZTool - Carregando módulo online..." -ForegroundColor Cyan
-
-# Teste rápido de conexão
-try {
-    $null = Invoke-RestMethod $rawUrl -Method Head -TimeoutSec 5
-}
-catch {
-    Write-Host "Falha ao conectar ao servidor do MZTool." -ForegroundColor Red
-    Write-Host "Verifique sua internet ou tente novamente mais tarde." -ForegroundColor Yellow
-    return
-}
-
-# Download do script real
-try {
-    $script = Invoke-RestMethod $rawUrl -UseBasicParsing
-}
-catch {
-    Write-Host "Erro ao baixar o módulo MZTool." -ForegroundColor Red
-    Write-Host "O servidor pode estar indisponível." -ForegroundColor Yellow
-    return
-}
-
-# Execução segura
-try {
-    Write-Host "Executando módulo..." -ForegroundColor Green
-    Invoke-Expression $script
-}
-catch {
-    Write-Host "Erro ao executar o módulo MZTool." -ForegroundColor Red
-    Write-Host "O script pode estar corrompido ou incompleto." -ForegroundColor Yellow
-    return
-}
-
-Write-Host "MZTool carregado com sucesso!" -ForegroundColor Green
+$MZTOOL = 'https://raw.githubusercontent.com/mzti/mztool/main/mztool.ps1'
+Invoke-Expression (Invoke-RestMethod $MZTOOL)
