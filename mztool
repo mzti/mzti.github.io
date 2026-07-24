@@ -1,4 +1,2 @@
 # MZTOOL LOADER
-
-$MZTOOL = 'https://raw.githubusercontent.com/mzti/mztool/main/mztool.ps1'
-Invoke-Expression (Invoke-RestMethod $MZTOOL)
+Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/mzti/mztool/main/mztool.ps1)
